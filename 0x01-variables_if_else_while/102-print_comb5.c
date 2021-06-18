@@ -20,11 +20,11 @@ if (digit1 >= 0 && digit2 > 1)
 putchar(',');
 putchar(' ');
 }
-putchar(digit1 / 10 + '0');
-putchar(digit1 % 10 + '0');
+putchar((digit1 / 10) + 0x30);
+putchar((digit1 % 10) + 0x30);
 putchar(' ');
-putchar(digit2 / 10 + '0');
-putchar(digit2 / 10 + '0');
+putchar((digit2 / 10) + 0x30);
+putchar((digit2 % 10) + 0x30);
 }
 }
 }
