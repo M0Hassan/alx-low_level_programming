@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/*main - print all single digit numbers from 0
+/**
+ *main - print all single digit numbers from 0
  *Return: Always 0 (success)
 */
 
