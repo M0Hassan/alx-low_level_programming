@@ -18,7 +18,7 @@ for (digit2 = '0'; digit2 <= '9'; digit2++)
 {
 for (pair1 = digit1; pair1 <= '9'; pair1++)
 {
-for (pair2 = digit2; pair2 <= '9'; pair2++)
+for (pair2 = digit2 + 1; pair2 <= '9'; pair2++)
 {
 putchar(digit1);
 putchar(digit2);
