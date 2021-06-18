@@ -32,10 +32,9 @@ putchar(',');
 putchar(' ');
 }
 }
-pair2 = '0';
 }
 }
 }
 putchar('\n');
 return (0);
-}  
+}
