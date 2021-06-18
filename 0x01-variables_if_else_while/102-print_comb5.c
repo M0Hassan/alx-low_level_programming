@@ -25,7 +25,7 @@ putchar(digit2);
 putchar(' ');
 putchar(pair1);
 putchar(pair2);
-if (!((digit1 == '0' && digit2 == '0') && (pair1 == '0' && pair2 == '0'))
+if (!((digit1 == '0' && digit2 == '0') && (pair1 == '0' && pair2 == '0')))
 {
 if (!((digit1 == '9' && digit2 == '8') && (pair1 == '9' && pair2 == '9')))
 {
@@ -34,6 +34,7 @@ putchar(' ');
 }
 }
 }
+pair2 = '0';
 }
 }
 }
