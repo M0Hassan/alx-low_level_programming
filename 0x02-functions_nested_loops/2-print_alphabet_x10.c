@@ -5,7 +5,7 @@
  *Return: 0
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 char alpha;
 int i;
@@ -17,6 +17,4 @@ _putchar(alpha);
 }
 _putchar('\n');
 }
-return (0);
 }
-
