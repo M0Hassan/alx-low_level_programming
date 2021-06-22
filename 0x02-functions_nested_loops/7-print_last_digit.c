@@ -6,13 +6,22 @@
  *
  *Return: the last digit
  */
-
-int print_last_digit(int n)
+int _abs(int n)
 {
 if (n < 0)
 {
-n *= -1;
+return (-n);
 }
-_putchar('0' + (n % 10));
-return (n % 10);
+else
+{
+return (n);
+}
+}
+
+int print_last_digit(int n)
+{
+int last_n;
+last_n = _abs((n % 10));
+_putchar('0' + last_n);
+return (last_n);
 }
