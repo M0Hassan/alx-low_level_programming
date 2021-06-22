@@ -2,10 +2,10 @@
 
 /**
  *_islower - checks whether a char is of lowercase
- *@c - the character to check 
+ *@c: - the character to check
+ * 
  *Return: 1 if lowercase or 0 if otherwise
  */
-
 
 int _islower(char c)
 {
@@ -19,4 +19,3 @@ return (0);
 }
 _putchar('\n');
 }
-
