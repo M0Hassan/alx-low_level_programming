@@ -7,19 +7,24 @@
 
 int main(void)
 {
-int counter;
-int countto = 50;
-long a = 1;
-long b = 2;
-for (counter = 1; counter <= (countto / 2); counter++)
+int i, n;
+long a, b, next;
+a = 1;
+b = 2;
+n = 50;
+for (i = 0; i <= n; i++)
 {
-printf("%li,  %li", a, b);
-a += b;
-b += a;
+if (i == 49)
+{
+printf("%lu", a);
 }
-if (countto % 2 == 1)
+else
 {
-printf("%li", a);
+printf("%lu, ", a);
+next = a+ b;
+a = b;
+b = next;
+}
 }
 printf("\n");
 return (0);
