@@ -1,6 +1,13 @@
 #include "holberton.h"
 
 /**
+ *_abs - prints the absolute value of intger n
+ *@n: - the integer
+ *
+ *Return: 0
+ */
+
+/**
  *print_last_digit - print the last digit of a number
  *@n: - the number
  *
