@@ -15,12 +15,12 @@ while (minutes < 60)
 {
 _putchar('0' + (hours / 10));
 _putchar('0' + (hours % 10));
-_putchar('\n');
+_putchar(':');
 _putchar('0' + (minutes / 10));
 _putchar('0' + (minutes % 10));
 minutes++;
 }
+minutes = 0;
 hours++;
 }
 }
-		   
