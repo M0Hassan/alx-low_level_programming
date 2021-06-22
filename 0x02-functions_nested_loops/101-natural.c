@@ -8,8 +8,8 @@
 int main(void)
 {
 int n;
-n = 1;
 int total;
+n = 1;
 total = 0;
 while (n < 1024)
 {
