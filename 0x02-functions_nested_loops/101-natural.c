@@ -7,14 +7,17 @@
 
 int main(void)
 {
-int n = 1;
-int total = 0;
+int n;
+n = 1;
+int total;
+total = 0;
 while (n < 1024)
 {
 if ((n % 3 == 0) && (n % 5 == 0))
+{
 total = total + n;
-n++;
 }
+n++;
 }
 printf("%d\n", total);
 return (0);
