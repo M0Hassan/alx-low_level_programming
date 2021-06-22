@@ -7,12 +7,6 @@
  *Return: 0
  */
 
-/**
- *print_last_digit - print the last digit of a number
- *@n: - the number
- *
- *Return: the last digit
- */
 int _abs(int n)
 {
 if (n < 0)
@@ -24,6 +18,13 @@ else
 return (n);
 }
 }
+
+/**
+ *print_last_digit - outputs the last digit of a number
+ *@n: - the number
+ *
+ *Return: the last digit
+ */
 
 int print_last_digit(int n)
 {
