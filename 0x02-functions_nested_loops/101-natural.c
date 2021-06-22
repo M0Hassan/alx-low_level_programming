@@ -9,15 +9,13 @@ int main(void)
 {
 int n;
 int total;
-n = 1;
 total = 0;
-while (n < 1024)
+for (n = 0; n < 1024; n++)
 {
 if ((n % 3 == 0) && (n % 5 == 0))
 {
 total = total + n;
 }
-n++;
 }
 printf("%d\n", total);
 return (0);
