@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *main - checks whether the functions prints positive or negative depending on the integer
+ *main - checks whether the function executes correctly
  *Return: - 0
  */
 
