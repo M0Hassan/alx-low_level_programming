@@ -4,9 +4,9 @@
 /**
  *print_remaining_days - prints the remaining days in a given year
  * given a certain date, taking into account leap years
- *@month - month of the year
- *@day - day of the year
- *@year - year
+ *@month: - month of the year
+ *@day: - day of the year
+ *@year: - year
  *Return: 0
  */
 
