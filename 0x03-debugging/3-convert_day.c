@@ -8,7 +8,7 @@
  *Return: - day of the year
  */
 
-int convert_day(int day, int month)
+int convert_day(int month, int day)
 {
   switch(month)
     {
@@ -36,14 +36,14 @@ int convert_day(int day, int month)
     case 9:
       day = 243 + day;
       break;
-    case 9:
+    case 10:
       day = 273 + day;
       break;
-    case 10;
+    case 11:
     day = 304 + day;
     break;
-    case 11:
-      day = 344 + day;
+    case 12:
+      day = 334 + day;
       break;
     default:
       break;
