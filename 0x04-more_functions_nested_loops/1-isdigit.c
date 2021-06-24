@@ -2,7 +2,7 @@
 
 /**
  *_isdigit - checks for a digit
- *@c - the digit to check
+ *@c: - the digit to check
  *Return: 1 if true 0 otherwise
  */
 
