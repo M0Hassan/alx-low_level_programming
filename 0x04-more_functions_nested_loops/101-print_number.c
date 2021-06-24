@@ -8,30 +8,16 @@
 
 void print_number(int n)
 {
-unsigned int tens, digit, positive = n;
-double t_begin = 1;
-if (n == 0)
-{
-_putchar('0');
-}
-else
-{
+unsigned int a;
+a = n;
 if (n < 0)
 {
-positive = n * -1;
-_putchar('-');
+_putchar(45);
+a = -n;
 }
-while (t_begin <= positive)
+if (a / 10)
 {
-t_begin *= 10;
+print_number(a / 10);
 }
-tens = t_begin / 10;
-while(tens >= 1)
-{
-digit = positive / tens;
-_putchar(digit + '0');
-positive = (positive - (tens * digit));
-tens /= 10;
-}
-}
+_putchar((a % 10) + '0');
 }
