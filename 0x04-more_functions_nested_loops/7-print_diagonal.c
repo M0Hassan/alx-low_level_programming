@@ -12,9 +12,9 @@ int draw;
 int space;
 if (n > 0)
 {
-for (draw = 1; draw < n; draw++)
+for (draw = 0; draw < n; draw++)
 {
-for (space = 1; space < draw; space++)
+for (space = 0; space < draw; space++)
 {
 _putchar(' ');
 }
