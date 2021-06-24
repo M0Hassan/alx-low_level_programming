@@ -10,16 +10,19 @@ void print_diagonal(int n)
 {
 int draw;
 int space;
-for (draw = 1; draw <= n; draw++)
+if (n > 0)
 {
-for (space = 1; space <= draw; space++)
+for (draw = 1; draw < n; draw++)
+{
+for (space = 1; space < draw; space++)
 {
 _putchar(' ');
 }
 _putchar('\\');
 _putchar('\n');
 }
-else
+}
+else if (n <= 0)
 {
 _putchar('\n');
 }
