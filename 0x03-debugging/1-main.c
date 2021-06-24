@@ -8,7 +8,7 @@
 int main(void)
 {
 int i;
-printf("infinite loop incloming : (\n");
+printf("infinite loop incloming :(\n");
 i = 0;
 /**
 *while (i < 10)
