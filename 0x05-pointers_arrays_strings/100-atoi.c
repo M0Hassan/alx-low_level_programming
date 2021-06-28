@@ -74,12 +74,12 @@ int sign;
 int t = 1, i;
 unsigned int num = 0;
 int digit = (idx_num_starts(s));
-if (idx_digit_starts > 0)
+if (idx_digit_starts < 0)
 {
 return (0);
 }
 sign = find_sign(s);
-while ((s[idx_digit_starts] <= '0' && s[idx_digit_starts] <= '9') && (idx_digit_starts <= _strlen(s)))
+while ((s[idx_digit_starts] >= '0' && s[idx_digit_starts] <= '9') && (idx_digit_starts <= _strlen(s)))
 {
 digits_to_print += 1;
 idx_digit_starts++;
