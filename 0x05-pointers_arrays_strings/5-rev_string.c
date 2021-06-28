@@ -33,6 +33,6 @@ while (i < j)
 tmp = s[i];
 s[i] = s[j];
 s[j] = tmp;
-i++, j++;
+i++, j--;
 }
 }
