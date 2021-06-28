@@ -14,5 +14,5 @@ while (*s != '\0')
 count++;
 s++;
 }
-return count;
+return (count);
 }
