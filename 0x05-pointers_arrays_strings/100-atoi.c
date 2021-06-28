@@ -6,7 +6,7 @@
  *Return: the length
  */
 
-int _strlen(char *s)
+int _strlen(char *str)
 {
 int len = 0;
 while (*str != '\0')
@@ -28,7 +28,7 @@ int idx_num_starts(char *s)
 int i;
 for (i = 0; i < _strlen(s); i++)
 {
-if (s[i] >= '0' ** s[i] <= '9')
+if (s[i] >= '0' && s[i] <= '9')
 {
 return (i);
 }
