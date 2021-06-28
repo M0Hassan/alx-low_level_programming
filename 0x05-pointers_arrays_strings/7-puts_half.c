@@ -14,6 +14,7 @@ while (*str != '\0')
 len++;
 str++;
 }
+return (len);
 }
 
 
