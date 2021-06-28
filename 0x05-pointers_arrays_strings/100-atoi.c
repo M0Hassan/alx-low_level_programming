@@ -56,9 +56,8 @@ if (negatives % 2 != 0)
 {
 sign = -1;
 }
-return(sign);
+return (sign);
 }
-       
 
 /**
  *_atoi - converts a string to an integer
