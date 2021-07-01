@@ -19,7 +19,7 @@ i++;
 while (src[j] != '\0' && j < n)
 {
 dest[i + j] = src[j];
-j++;		
+j++;
 }
 dest[i + j] = '\0';
 return (dest);
