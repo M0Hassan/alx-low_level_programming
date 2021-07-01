@@ -1,25 +1,18 @@
 #include "holberton.h"
 
 /**
- *string_toupper - changes all lowercase letters to uppercase
- *@s: the string
- *Return: an uppercase string
+ * string_toupper - capitalize all letters in string
+ * @s: string to manipulate
+ * Return: string with all letters capitalized
  */
 
 char *string_toupper(char *s)
 {
 int i = 0;
-int j;
-while (s[i] != '0')
+for (i = 0; s[i] != '\0'; i++)
 {
-i++;
-}
-for (j = 0; j < i; j++)
-{
-if (s[j] >= 97 && s[j] <= 122)
-{
-s[j] = s[j] - 32;
-}
+if (s[i] >= 'a' && s[i] <= 'z')
+s[i] = s[i] - 'a' + 'A';
 }
 return (s);
 }
