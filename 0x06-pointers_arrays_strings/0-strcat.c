@@ -1,4 +1,4 @@
-#include "holberton.h"
+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#include "holberton.h"
 
 /**
  *_strcat - concatenates two strings together
@@ -17,7 +17,8 @@ i++;
 }
 while (src[j] != '\0')
 {
-dest[i+j] = src[j];j++;
+dest[i + j] = src[j];
+j++;
 }
 dest[i+j] = '\0';
 return (dest);
