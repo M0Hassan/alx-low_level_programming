@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- *_strncat - concatenate two strings
- *@dest: first string
- *@src: second string
- *@n: the integer
- *Return: concatenated string
- */
+*_strncat - concatenate two strings
+*@dest: first string
+*@src: second string
+*@n: the integer
+*Return: concatenated string
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
