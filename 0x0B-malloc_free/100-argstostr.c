@@ -1,55 +1,39 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * argstostr - concatenates all the arguments of your program.
+ * @ac: number of arguments
+ * @av: double pointer to arguments
+ *
+ * Return:pointer to new string, or NULL if error
  */
-
-int _strlen(char *s)
-{
-int len = 0;
-while (*s != '\0')
-len++, s++;
-return (len);
-}
-
-/**
- * argstostr - concatenates all the arguments of your program
- * @ac: argc
- * @av: arguments
- * Return: pointer to array
- */
-
 char *argstostr(int ac, char **av)
 {
+int i, j, k = 0, n = 0;
 char *s;
-int len = 0, i, j, k = 0;
-if (ac == 0 || av == NULL) /* validate input */
+if (ac <= 0 || av == NULL)
 return (NULL);
-/* find length to malloc */
 for (i = 0; i < ac; i++)
 {
-len += _strlen(av[i]);
+for (j = 0; av[i][j]; j++)
+n++;
+n++;
 }
-len += (ac + 1); /* add space for newlines and null terminator */
-/* allocate memory and free if error */
-s = malloc(len *sizeof(char));
+n++;
+s = malloc(n *sizeof(char));
 if (s == NULL)
-{
-free(s);
 return (NULL);
-}
-/* insert each arg into *str */
 for (i = 0; i < ac; i++)
 {
-for (j = 0; j < _strlen(av[i]); j++)
+for (j = 0; av[i][j]; j++)
 {
-s[k++] = av[i][j];
+s[k] = av[i][j];
+k++;
 }
-s[k++] = '\n';
+s[k] = '\n';
+k++;
 }
+s[k] = '\0';
 return (s);
 }
