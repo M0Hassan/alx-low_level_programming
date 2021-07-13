@@ -1,48 +1,55 @@
-#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "holberton.h"
 
 /**
- * argstostr - function that concatenates all the arguments of your program.
- * @ac: int that count the number of arguments
- * @av: arguments value
- * Return: void
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
+
+int _strlen(char *s)
+{
+int len = 0;
+while (*s != '\0')
+len++, s++;
+return (len);
+}
+
+/**
+ * argstostr - concatenates all the arguments of your program
+ * @ac: argc
+ * @av: arguments
+ * Return: pointer to array
+ */
+
 char *argstostr(int ac, char **av)
 {
-char *ptr;
-char *ptr2;
-int i;
-int j;
-int count = 0;
-if (ac == 0 || av == NULL)
-{
+char *s;
+int len = 0, i, j, k = 0;
+if (ac == 0 || av == NULL) /* validate input */
 return (NULL);
-}
+/* find length to malloc */
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++)
-{
-count++;
+len += _strlen(av[i]);
 }
-count++;
-}
-count += 1;
-ptr = malloc(sizeof(char) * count);
-ptr2 = ptr;
-if (ptr == NULL)
+len += (ac + 1); /* add space for newlines and null terminator */
+/* allocate memory and free if error */
+s = malloc(len *sizeof(char));
+if (s == NULL)
 {
+free(s);
 return (NULL);
 }
+/* insert each arg into *str */
 for (i = 0; i < ac; i++)
 {
-for (j = 0; av[i][j] != '\0'; j++)
+for (j = 0; j < _strlen(av[i]); j++)
 {
-*ptr = av[i][j];
-ptr++;
+s[k++] = av[i][j];
 }
-*ptr = '\n';
-ptr++;
+s[k++] = '\n';
 }
-return (ptr2);
+return (s);
 }
