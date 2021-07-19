@@ -7,7 +7,7 @@
  * @str: string
  * Return: length
  */
-int len(char *str)
+int _len(char *str)
 {
 int i;
 for (i = 0; *(str + i); i++)
@@ -25,7 +25,7 @@ return (i);
 char *strcpy(char *dest, char *src)
 {
 int i;
-for (i = 0; i <= len(src); i++)
+for (i = 0; i <= _len(src); i++)
 dest[i] = src[i];
 return (dest);
 }
@@ -49,26 +49,26 @@ dog1->age = age;
 /* set values of struct members to copies of arguments or set to NULL */
 if (name != NULL)
 {
-copy_of_name = malloc(len(name) + 1);
+copy_of_name = malloc(_len(name) + 1);
 if (copy_of_name == NULL)
 {
 free(dog1);
 return (NULL);
 }
-dog1->name = strcpy(copy_of_name, name);
+dog1->name = _strcpy(copy_of_name, name);
 }
 else
 dog1->name = NULL;
 if (owner != NULL)
 {
-copy_of_owner = malloc(len(owner) + 1);
+copy_of_owner = malloc(_len(owner) + 1);
 if (copy_of_owner == NULL)
 {
 free(copy_of_name);
 free(dog1);
 return (NULL);
 }
-dog1->owner = strcpy(copy_of_owner, owner);
+dog1->owner = _strcpy(copy_of_owner, owner);
 }
 else
 dog1->owner = NULL;
