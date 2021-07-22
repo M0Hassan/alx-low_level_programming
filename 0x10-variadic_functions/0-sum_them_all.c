@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * sum_them_all - return sum when given unknown amount of arguments
  * @n: integers to add
