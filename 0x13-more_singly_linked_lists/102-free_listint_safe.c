@@ -92,6 +92,5 @@ num_nodes += 1;
 tmp = tmp->next;
 }
 }
-
 return (num_nodes);
 }
