@@ -1,1 +1,0 @@
-Learning about Linked Lists in C.
