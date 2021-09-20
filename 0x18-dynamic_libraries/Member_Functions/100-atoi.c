@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  *idx_num_starts - the uindex where a number is first fond in a string
