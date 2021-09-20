@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
 *_isalpha - checker for an alphabet
