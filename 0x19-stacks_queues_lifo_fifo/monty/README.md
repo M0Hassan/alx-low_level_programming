@@ -1,1 +1,0 @@
-Learning the Monty scripting Language and interpreting Monty Bytecodes.
