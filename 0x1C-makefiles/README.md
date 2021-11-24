@@ -3,8 +3,6 @@
 > specific to make and Makefiles in Unix. These files are used for compiling. Usage: ```make [all/clean/oclean/fclean/re] -\
 f [file]```
 
-![](https://image.ibb.co/b7X82y/Capture.png)
-
 ### Description of what each file shows:
 * holberton.c ---- function that displays visual seahorse
 * main.c --------- program that holds above function
