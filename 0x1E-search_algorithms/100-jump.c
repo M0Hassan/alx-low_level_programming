@@ -1,5 +1,4 @@
 #include "search_algos.h"
-
 /**
 * print_range - helper func to print at each check
 * @i: index before jump
