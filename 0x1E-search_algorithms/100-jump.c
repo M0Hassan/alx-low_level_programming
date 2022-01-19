@@ -9,7 +9,6 @@ void print_range(size_t i, size_t j)
 {
 printf("Value found between indexes [%lu] and [%lu]\n", i, j);
 }
-
 /**
 * print_i - helper func to print idx each check
 * @array: array
@@ -19,7 +18,6 @@ void print_i(int *array, size_t i)
 {
 printf("Value checked array[%lu] = [%d]\n", i, array[i]);
 }
-
 /**
 * jump_search - find square root, jump steps to find match, end linear search
 * @array: given array of ints
@@ -32,13 +30,12 @@ int jump_search(int *array, size_t size, int value)
 size_t jumps = sqrt(size);
 size_t i = 0;
 size_t j = 0;
-
 if (!array)
 return (-1);
 while (j <= size)
 {
 if (j != 0)
-	print_i(array, i);
+print_i(array, i);
 if (array[j] >= value)
 {
 print_range(i, j);
