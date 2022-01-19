@@ -1,47 +1,71 @@
 #include "search_algos.h"
-#include <math.h>
 
 /**
- * jump_search - Searches for a value in a sorted array
- * @array: pointer to the first element in the array
- * @size: number of the elements in the array
- * @value: value to be searched for
- * Return: 1 if the value is found and -1 if not
- */
+* print_range - helper func to print at each check
+* @i: index before jump
+* @j: index after jump
+*/
+void print_range(size_t i, size_t j)
+{
+printf("Value found between indexes [%lu] and [%lu]\n", i, j);
+}
+
+/**
+* print_i - helper func to print idx each check
+* @array: array
+* @i: index checked
+*/
+void print_i(int *array, size_t i)
+{
+printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+}
+
+/**
+* jump_search - find square root, jump steps to find match, end linear search
+* @array: given array of ints
+* @size: size of array
+* @value: value to search for
+* Return: index at which value's found
+*/
 int jump_search(int *array, size_t size, int value)
 {
-  int jump = 0;
-  int i = 0;
-  int b = 0;
+size_t jumps = sqrt(size);
+size_t i = 0;
+size_t j = 0;
 
-  if (array == NULL)
-    return (-1);
-
-  jump = sqrt(size);
-  while (array[i] < value && i < (int) size)
-    {
-      b = i;
-      i = b + jump;
-      if (b < (int) size)
-	printf("Value checked array[%d] = [%d]\n", b, array[b]);
-    }
-  if (b >= (int) size && array[size] != value)
-    b -= jump;
-
-  printf("Value found between indexex [%d] and [%d] \n", b, b + jump);
-
-  while (array[b] < value)
-    {
-      if (b >= (int) size)
-	break;
-      printf("Value checked array[%d] = [%d]\n",  b, array[b]);
-      b += 1;
-    }
-
-  if (array[b] == value)
-    {
-      printf("Value checked array[%d] = [%d]\n", b, array[b]);
-      return (b);
-    }
-  return (-1);
+if (!array)
+return (-1);
+while (j <= size)
+{
+if (j != 0)
+print_i(array, i);
+if (array[j] >= value)
+{
+print_range(i, j);
+while (i <= j)
+{
+print_i(array, i);
+if (array[i] == value)
+return (i);
+i++;
+}
+return (-1);
+}
+if (j + jumps + jumps > size)
+{
+print_i(array, j);
+ print_range(j, j + jumps);
+while (j < size)
+{
+print_i(array, j);
+if (array[j] == value)
+return (j);
+j++;
+}
+return (-1);
+}
+i = j;
+j += jumps;
+}
+return (-1);
 }
